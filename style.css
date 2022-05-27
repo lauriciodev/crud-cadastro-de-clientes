@@ -2,130 +2,152 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.add__new{
-    position: fixed;
-    right:4%;
-    top: 30px;
-
+body{
+    background-color: aliceblue;
 }
 
 
+:root{
+    --cor-principal:#09328b;
+    --cor-secundaria:#0a1e49;
+    --cor-texto:#ffffff;
+    --cor-hover:#011849;
 
-.dados__modal{
-    width: 100%;
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    background-color: rgb(3, 59, 105);
-    padding: 20px;
-    gap: 10px;
-    top: 20px;
-    
-}
-
-.dados__modal input{
-    height: 50px;
-    font-size: 1.3rem;
-}
-
-.cont__modal{
-    
-    width: 100%;
-    height:100vh;
-    top: 10px;
-    display:none;
-    
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.842);
-}
-
-.show{
- display: flex;
-}
-
-.dados__modal input{
-    width: 100%;
 }
 
 .container{
     width: 100vw;
-    height: 100vh;
-padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
 }
 
 .sub__container{
-    padding: 5px;
     width: 100%;
-    max-width: 900px;
-     margin: 0 auto;
-
-     background-color: rgb(219, 221, 221);
-
-}
-.container__title{
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    padding: 4px 0;
-    color: rgb(0, 119, 255);
-}
-
-.container__input{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.container__input input {
-    width: 80%;
-}
-
-button {
-    background-color: rgb(5, 143, 207);
-    color: white;
-    border: 3px solid rgb(0, 18, 121);
-    padding: 3px;
-    transition:  .2s ;
-}
-
-button:hover {
-    background-color: rgb(0, 96, 141);
-    color: white;
-    border: 2px solid rgb(4, 91, 131);
-    padding: 3px;
-}
-
-.container__cadastros{
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border: 2px solid rgb(0, 163, 212);
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-principal);
+    
+
 }
 
-.info__container{
+
+.title__container{
+    width: 100%;
+    height: 60px;
+    background-color: var(--cor-hover);
+    text-align: center;
+    line-height: 60px;
+    color: var(--cor-texto); 
+      
+
+}
+
+.clientes__container{
+    width: 100%;
+    padding: 5px;
+}
+
+.table__container{
+    border-collapse: collapse;
+    border-color: var(--cor-texto);
+    width: 100%;
+    
+}
+
+.table__container thead{
+    height: 40px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--cor-texto);
+}
+
+.table__container tbody{
+    height: 30px;
+    font-size: 18px;
+    color: var(--cor-texto);
+    text-align: center;
+
+}
+
+
+.btn{
+   padding: 5px 10px;
+    background-color: var(--cor-hover);
+    color: var(--cor-texto);
+    border: 2px solid rgb(1, 33, 102);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.btn:hover{
+    padding: 5px 10px;
+    background-color: var(--cor-hover);
+    color: var(--cor-texto);
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/* ===========modal section =======  */
+
+#call__modal{
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+
+.modal__container{
+    width: 100%;
+    max-width: 0px;
+    overflow: hidden;
+    position: absolute;
+    background-color: #09328b;
+    border-radius: 20px;
+    transition: .1s;
+    
+}
+
+.modal__open{
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: absolute;
+    background-color: #09328b;
+   border: 2px solid rgb(16, 18, 116);
+   padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.input__container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input__container div{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 5%;
-    border: 1px solid black;
-    padding: 2px;
-    color: steelblue;
-    text-align: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-.info__container h3{
-    text-align: center;
+.input__container input{
+    height: 30px;
+    width: 100%;
+    font-size: 1.1rem;
+    border: 2px solid rgb(0, 110, 255);
+    padding-left: 5px;
+
+}
+
+.input__container input:focus{
+    outline: none;
+    border: 2px solid rgb(18, 62, 119);
 }

@@ -4,46 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cadatro de funcionarios</title>
     <link rel="stylesheet" href="style.css">
+    <title>Crud cadastro de clientes</title>
 </head>
 <body>
+
     <div class="container">
-        <button class="add__new" onclick="show('cadastrar')">Cadastrar Novo</button>
-       <div class="cont__modal">
-        <div class="dados__modal">
-            <input type="text" id="nome" placeholder="Nome">
-            <input type="text" id="cargo" placeholder="Cargo">
-            <input type="number" id="salario" placeholder="Salario">
-           <div class="cont__btn">
-            <button id="btn__cancelar" onclick="show('cancelar')">cancelar</button>
-            <button id="btn__cadastrar">cadastrar</button>
-            <button id="btn__salvar" >salvar</button>
-           </div>
-        </div>
-       </div>
         <div class="sub__container">
-            <div class="container__title">
-                <h1>cadastro de funcionarios</h1>
+            <div class="title__container">
+                <h1>
+                    CRUD Clientes
+                </h1>
             </div>
-            <div class="info__container" style="gap: 7%; background-color: rgb(17, 83, 145); color: white;" >
-                <h3>#ID</h3>
-               <h3 class="nome">Nome</h3>
-               <h3 class="cargo">Cargo</h3>
-               <h3 class="salario">Salario</h3>
-               <div class="functions" style="width: 80px; text-align: center;">
-                 <h3>funções</h3>
-               </div>
-            </div>
-           
-            <div id="cont__parent" class="container__cadastros" >
-               
-               
+            <div class="clientes__container">
+                <table class="table__container" border="1px" >
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Email</td>
+                            <td>Telefone</td>
+                            <td>Cidade</td>
+                            <td>funções</td>
+                        </tr>
+                    </thead>
+                    <tbody id="cont__clientes">
+                        <tr>
+                            <td>lauricio</td>
+                            <td>lauricio@gmail.com</td>
+                            <td>0989812344</td>
+                            <td>vila nova MT</td>
+                            <td>
+                                <button class="btn">X</button>
+                                <button class="btn">!</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
             </div>
         </div>
-    </div> 
+
+
+
+        <button class="btn" id="call__modal"> 
+                Novo Cliente
+        </button>
+
+
+        <div class="modal__container">
+            <div class="title__container">
+                <h1>
+                    Cadastrar Novo Cliente
+                </h1>
+            </div>
+            <div class="input__container">
+                <div>
+                    <input type="text" placeholder="Nome" required>
+                    <input type="email" placeholder="Email" required >
+                </div>
+                <div>
+                    <input type="tel" placeholder="Telefone" required>
+                    <input type="text" placeholder="Cidade" required>
+                </div>
+
+
+            </div>
+            <div class="buttons__container">
+                <button class="btn">Cadastrar</button>
+                <button class="btn" id="cancel">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
     
-    
+
     <script src="script.js"></script>
 </body>
 </html>
