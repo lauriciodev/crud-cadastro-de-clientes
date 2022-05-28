@@ -151,3 +151,15 @@ body{
     outline: none;
     border: 2px solid rgb(18, 62, 119);
 }
+
+
+@keyframes open {
+    0% {
+        display: block;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    100% {
+        opacity: 1;
+    }
+}
