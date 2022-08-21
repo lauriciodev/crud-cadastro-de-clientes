@@ -1,77 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Crud cadastro de clientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>crud cadastro de clientes</title>
 </head>
 <body>
+  <div class="container">
+    <div class="subcontainer__container">
+      <div class="title__container">
+      <h1>crud cadastro de clientes</h1>
+      </div>
 
-    <div class="container">
-        <div class="sub__container">
-            <div class="title__container">
-                <h1>
-                    CRUD Clientes
-                </h1>
-            </div>
-            <div class="clientes__container">
-                <table class="table__container" border="1px" >
-                    <thead>
-                        <tr>
-                            <td>Nome</td>
-                            <td>Email</td>
-                            <td>Telefone</td>
-                            <td>Cidade</td>
-                            <td>funções</td>
-                        </tr>
-                    </thead>
-                    <tbody id="cont__clientes">
-                        
+      <table class="table__container" border>
+        <thead>
+          <tr>
+            <td>Nome</td>
+            <td>Telefone</td>
+            <td>Email</td>
+            <td>Cidade</td>
+            <td>Ações</td>
+          </tr>
+        </thead>
 
-                        
-                    </tbody>
-
-                </table>
-            </div>
-        </div>
-
-
-
-        <button class="btn" id="call__modal"> 
-                Novo Cliente
-        </button>
+         <tbody>
+          <tr>
+            <td>lauricio</td>
+            <td>64 991912333</td>
+            <td>laufodao009@gmail.com</td>
+            <td>palmas </td>
+            <td class="button__container">
+              <button class="btn" id="edit"><i class="ri-edit-box-fill"></i></button>
+              <button class="btn" id="delete"><i class="ri-delete-bin-fill"></i></button>
+            </td>
+          </tr>
+         </tbody>
+      </table>
 
 
-        <div class="modal__container">
-            <div class="title__container">
-                <h1>
-                    Cadastrar Novo Cliente
-                </h1>
-            </div>
-            <div class="input__container">
-                <div>
-                    <input type="text" id="nome" placeholder="Nome" required>
-                    <input type="email" id="email" placeholder="Email" required >
-                </div>
-                <div>
-                    <input type="tel" id="telefone" placeholder="Telefone" required>
-                    <input type="text" id="cidade" placeholder="Cidade" required>
-                </div>
-
-
-            </div>
-            <div class="buttons__container">
-                <button class="btn" id="btn__cadastro">Cadastrar</button>
-                <button class="btn" id="cancel">Cancelar</button>
-            </div>
-
-        </div>
+      
     </div>
+
+  <button class="btn" id="call__modal">Novo Cliente</button>
+
+    <div class="container__modal" id="modal__modal" >
+      <div class="modal">
+        <div class="modal__title">
+          <h2>novo cliente</h2>
+        </div>
+        <form id="form" class="modal__form">
+          <input type="text" id="nome" placeholder="Nome"  required>
+          <input type="text" id="telefone" placeholder="Telefone" required>
+          <input type="text" id="email" placeholder="Email" required>
+          <input type="text" id="cidade" placeholder="Cidade" required>
+
+          <div class="modal__buttons">
+            <button class="btn" id="btn__cadastrar" type="submit">Cadastrar</button>
+            <button class="btn" id="btn__close">Cancelar</button>
+          </div>
+        </form>
+  
+        
+
+      </div>
+    </div>
+
     
-    
-    <script type="module" src="./src/script.js"></script>
+  </div>
+
+
+  <script src="index.js"></script>
+  
 </body>
 </html>
