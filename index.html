@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <title>crud cadastro de clientes</title>
 </head>
 <body>
@@ -26,17 +25,8 @@
           </tr>
         </thead>
 
-         <tbody>
-          <tr>
-            <td>lauricio</td>
-            <td>64 991912333</td>
-            <td>laufodao009@gmail.com</td>
-            <td>palmas </td>
-            <td class="button__container">
-              <button class="btn" id="edit"><i class="ri-edit-box-fill"></i></button>
-              <button class="btn" id="delete"><i class="ri-delete-bin-fill"></i></button>
-            </td>
-          </tr>
+         <tbody id="tableBody">
+          
          </tbody>
       </table>
 
@@ -52,16 +42,18 @@
           <h2>novo cliente</h2>
         </div>
         <form id="form" class="modal__form">
-          <input type="text" id="nome" placeholder="Nome"  required>
-          <input type="text" id="telefone" placeholder="Telefone" required>
-          <input type="text" id="email" placeholder="Email" required>
-          <input type="text" id="cidade" placeholder="Cidade" required>
+          <input class="modal__fields" data-indice="new" type="text" id="nome" placeholder="Nome"  required>
+          <input class="modal__fields" type="text" id="telefone" placeholder="Telefone" required>
+          <input class="modal__fields" type="text" id="email" placeholder="Email" required>
+          <input class="modal__fields" type="text" id="cidade" placeholder="Cidade" required>
 
-          <div class="modal__buttons">
-            <button class="btn" id="btn__cadastrar" type="submit">Cadastrar</button>
-            <button class="btn" id="btn__close">Cancelar</button>
-          </div>
+         
         </form>
+
+        <div class="modal__buttons">
+          <button class="btn" id="btn__cadastrar">Cadastrar</button>
+          <button class="btn" id="btn__close">Cancelar</button>
+        </div>
   
         
 
