@@ -44,6 +44,7 @@ const deleteCliente = (indice) =>{
   data.splice(indice,1);
  setLocalStorage(data);
  updateRow();
+ 
 }
 
 
