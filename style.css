@@ -50,11 +50,21 @@ body{
   border: 2px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0); 
   width: 100%;
+  font-size: 1rem;
 
+}
+
+@media screen and (max-width:620px) {
+  .table__container{
+    font-size: .5rem;
+  
+  }
+  
 }
 
 .table__container thead tr td{
   padding: 3px;
+  background-color: rgba(240, 248, 255, 0.616);
 }
 .table__container tbody tr td{
   padding: 3px;

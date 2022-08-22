@@ -6,6 +6,7 @@ modal.classList.add("open")
 const closeModal = () =>{
 modal.classList.remove("open")
 clearFileds();
+nome.dataset.indice = "new"
 
 }
 
